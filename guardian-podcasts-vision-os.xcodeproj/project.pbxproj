@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		973A43302B3E1DFE00CCA7AB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 973A432F2B3E1DFE00CCA7AB /* RealityKitContent */; };
+		973A43322B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */; };
+		973A43342B3E1DFE00CCA7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43332B3E1DFE00CCA7AB /* ContentView.swift */; };
+		973A43362B3E1E0000CCA7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973A43352B3E1E0000CCA7AB /* Assets.xcassets */; };
+		973A43392B3E1E0000CCA7AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973A43382B3E1E0000CCA7AB /* Preview Assets.xcassets */; };
+		9790EEFE2B3E1F5B003CC3F4 /* Masthead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EEFD2B3E1F5B003CC3F4 /* Masthead.swift */; };
+		9790EF002B3E2075003CC3F4 /* SeriesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EEFF2B3E2075003CC3F4 /* SeriesPicker.swift */; };
+		9790EF032B3E2193003CC3F4 /* PodcastSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF022B3E2193003CC3F4 /* PodcastSeries.swift */; };
+		9790EF052B3E2423003CC3F4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF042B3E2423003CC3F4 /* Card.swift */; };
+		9790EF082B3E2E0C003CC3F4 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF072B3E2E0C003CC3F4 /* Podcast.swift */; };
+		9790EF0B2B3E2F41003CC3F4 /* Robin in Frameworks */ = {isa = PBXBuildFile; productRef = 9790EF0A2B3E2F41003CC3F4 /* Robin */; };
+		9790EF102B3E35FD003CC3F4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF0F2B3E35FD003CC3F4 /* Network.swift */; };
+		9790EF122B3E3604003CC3F4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF112B3E3604003CC3F4 /* Endpoint.swift */; };
+		9790EF142B3E3610003CC3F4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF132B3E3610003CC3F4 /* Service.swift */; };
+		9790EF162B3E3630003CC3F4 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF152B3E3630003CC3F4 /* NetworkEngine.swift */; };
+		9790EF182B3E3685003CC3F4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF172B3E3685003CC3F4 /* AppError.swift */; };
+		9790EF1A2B3E437F003CC3F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF192B3E437F003CC3F4 /* Player.swift */; };
+		9790EF202B3E4811003CC3F4 /* GuardianTextEgyptian-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9790EF1F2B3E4811003CC3F4 /* GuardianTextEgyptian-Bold.ttf */; };
+		9790EF222B3E4861003CC3F4 /* GuardianTextEgyptian-Med.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9790EF212B3E4861003CC3F4 /* GuardianTextEgyptian-Med.ttf */; };
+		9790EF252B3E4E03003CC3F4 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790EF242B3E4E03003CC3F4 /* NavigationViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		973A432A2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guardian-podcasts-vision-os.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		973A432E2B3E1DFE00CCA7AB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guardian_podcasts_vision_osApp.swift; sourceTree = "<group>"; };
+		973A43332B3E1DFE00CCA7AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		973A43352B3E1E0000CCA7AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		973A43382B3E1E0000CCA7AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		973A433A2B3E1E0000CCA7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9790EEFD2B3E1F5B003CC3F4 /* Masthead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masthead.swift; sourceTree = "<group>"; };
+		9790EEFF2B3E2075003CC3F4 /* SeriesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesPicker.swift; sourceTree = "<group>"; };
+		9790EF022B3E2193003CC3F4 /* PodcastSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSeries.swift; sourceTree = "<group>"; };
+		9790EF042B3E2423003CC3F4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9790EF072B3E2E0C003CC3F4 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		9790EF0F2B3E35FD003CC3F4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9790EF112B3E3604003CC3F4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9790EF132B3E3610003CC3F4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9790EF152B3E3630003CC3F4 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		9790EF172B3E3685003CC3F4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		9790EF192B3E437F003CC3F4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9790EF1F2B3E4811003CC3F4 /* GuardianTextEgyptian-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GuardianTextEgyptian-Bold.ttf"; sourceTree = "<group>"; };
+		9790EF212B3E4861003CC3F4 /* GuardianTextEgyptian-Med.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GuardianTextEgyptian-Med.ttf"; sourceTree = "<group>"; };
+		9790EF242B3E4E03003CC3F4 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		973A43272B3E1DFD00CCA7AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973A43302B3E1DFE00CCA7AB /* RealityKitContent in Frameworks */,
+				9790EF0B2B3E2F41003CC3F4 /* Robin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		973A43212B3E1DFD00CCA7AB = {
+			isa = PBXGroup;
+			children = (
+				973A432C2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os */,
+				973A432D2B3E1DFD00CCA7AB /* Packages */,
+				973A432B2B3E1DFD00CCA7AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		973A432B2B3E1DFD00CCA7AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				973A432A2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		973A432C2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF232B3E4DF5003CC3F4 /* View Models */,
+				9790EF1E2B3E47ED003CC3F4 /* Fonts */,
+				9790EF0E2B3E35E0003CC3F4 /* Network */,
+				9790EF062B3E2E01003CC3F4 /* Models */,
+				9790EF012B3E2188003CC3F4 /* Enums */,
+				9790EEFC2B3E1F4C003CC3F4 /* UI Components */,
+				973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */,
+				973A43332B3E1DFE00CCA7AB /* ContentView.swift */,
+				973A43352B3E1E0000CCA7AB /* Assets.xcassets */,
+				973A433A2B3E1E0000CCA7AB /* Info.plist */,
+				973A43372B3E1E0000CCA7AB /* Preview Content */,
+			);
+			path = "guardian-podcasts-vision-os";
+			sourceTree = "<group>";
+		};
+		973A432D2B3E1DFD00CCA7AB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				973A432E2B3E1DFE00CCA7AB /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		973A43372B3E1E0000CCA7AB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				973A43382B3E1E0000CCA7AB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9790EEFC2B3E1F4C003CC3F4 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				9790EEFD2B3E1F5B003CC3F4 /* Masthead.swift */,
+				9790EEFF2B3E2075003CC3F4 /* SeriesPicker.swift */,
+				9790EF042B3E2423003CC3F4 /* Card.swift */,
+				9790EF192B3E437F003CC3F4 /* Player.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		9790EF012B3E2188003CC3F4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF022B3E2193003CC3F4 /* PodcastSeries.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9790EF062B3E2E01003CC3F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF072B3E2E0C003CC3F4 /* Podcast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9790EF0E2B3E35E0003CC3F4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF0F2B3E35FD003CC3F4 /* Network.swift */,
+				9790EF112B3E3604003CC3F4 /* Endpoint.swift */,
+				9790EF132B3E3610003CC3F4 /* Service.swift */,
+				9790EF152B3E3630003CC3F4 /* NetworkEngine.swift */,
+				9790EF172B3E3685003CC3F4 /* AppError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9790EF1E2B3E47ED003CC3F4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF1F2B3E4811003CC3F4 /* GuardianTextEgyptian-Bold.ttf */,
+				9790EF212B3E4861003CC3F4 /* GuardianTextEgyptian-Med.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9790EF232B3E4DF5003CC3F4 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				9790EF242B3E4E03003CC3F4 /* NavigationViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		973A43292B3E1DFD00CCA7AB /* guardian-podcasts-vision-os */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 973A433D2B3E1E0000CCA7AB /* Build configuration list for PBXNativeTarget "guardian-podcasts-vision-os" */;
+			buildPhases = (
+				973A43262B3E1DFD00CCA7AB /* Sources */,
+				973A43272B3E1DFD00CCA7AB /* Frameworks */,
+				973A43282B3E1DFD00CCA7AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "guardian-podcasts-vision-os";
+			packageProductDependencies = (
+				973A432F2B3E1DFE00CCA7AB /* RealityKitContent */,
+				9790EF0A2B3E2F41003CC3F4 /* Robin */,
+			);
+			productName = "guardian-podcasts-vision-os";
+			productReference = 973A432A2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		973A43222B3E1DFD00CCA7AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					973A43292B3E1DFD00CCA7AB = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 973A43252B3E1DFD00CCA7AB /* Build configuration list for PBXProject "guardian-podcasts-vision-os" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 973A43212B3E1DFD00CCA7AB;
+			packageReferences = (
+				9790EF092B3E2F41003CC3F4 /* XCRemoteSwiftPackageReference "robin" */,
+			);
+			productRefGroup = 973A432B2B3E1DFD00CCA7AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				973A43292B3E1DFD00CCA7AB /* guardian-podcasts-vision-os */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		973A43282B3E1DFD00CCA7AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9790EF222B3E4861003CC3F4 /* GuardianTextEgyptian-Med.ttf in Resources */,
+				9790EF202B3E4811003CC3F4 /* GuardianTextEgyptian-Bold.ttf in Resources */,
+				973A43392B3E1E0000CCA7AB /* Preview Assets.xcassets in Resources */,
+				973A43362B3E1E0000CCA7AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		973A43262B3E1DFD00CCA7AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9790EF162B3E3630003CC3F4 /* NetworkEngine.swift in Sources */,
+				9790EEFE2B3E1F5B003CC3F4 /* Masthead.swift in Sources */,
+				9790EF122B3E3604003CC3F4 /* Endpoint.swift in Sources */,
+				9790EF082B3E2E0C003CC3F4 /* Podcast.swift in Sources */,
+				9790EF102B3E35FD003CC3F4 /* Network.swift in Sources */,
+				9790EF1A2B3E437F003CC3F4 /* Player.swift in Sources */,
+				9790EF052B3E2423003CC3F4 /* Card.swift in Sources */,
+				973A43342B3E1DFE00CCA7AB /* ContentView.swift in Sources */,
+				9790EF002B3E2075003CC3F4 /* SeriesPicker.swift in Sources */,
+				9790EF182B3E3685003CC3F4 /* AppError.swift in Sources */,
+				9790EF252B3E4E03003CC3F4 /* NavigationViewModel.swift in Sources */,
+				9790EF142B3E3610003CC3F4 /* Service.swift in Sources */,
+				973A43322B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift in Sources */,
+				9790EF032B3E2193003CC3F4 /* PodcastSeries.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		973A433B2B3E1E0000CCA7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		973A433C2B3E1E0000CCA7AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		973A433E2B3E1E0000CCA7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"guardian-podcasts-vision-os/Preview Content\"";
+				DEVELOPMENT_TEAM = F58BF86G54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.usman.guardian-podcasts-vision-os";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		973A433F2B3E1E0000CCA7AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"guardian-podcasts-vision-os/Preview Content\"";
+				DEVELOPMENT_TEAM = F58BF86G54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.usman.guardian-podcasts-vision-os";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		973A43252B3E1DFD00CCA7AB /* Build configuration list for PBXProject "guardian-podcasts-vision-os" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				973A433B2B3E1E0000CCA7AB /* Debug */,
+				973A433C2B3E1E0000CCA7AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		973A433D2B3E1E0000CCA7AB /* Build configuration list for PBXNativeTarget "guardian-podcasts-vision-os" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				973A433E2B3E1E0000CCA7AB /* Debug */,
+				973A433F2B3E1E0000CCA7AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9790EF092B3E2F41003CC3F4 /* XCRemoteSwiftPackageReference "robin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guardian/robin.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		973A432F2B3E1DFE00CCA7AB /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		9790EF0A2B3E2F41003CC3F4 /* Robin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9790EF092B3E2F41003CC3F4 /* XCRemoteSwiftPackageReference "robin" */;
+			productName = Robin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 973A43222B3E1DFD00CCA7AB /* Project object */;
+}
