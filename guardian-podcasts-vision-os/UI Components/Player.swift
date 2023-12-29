@@ -117,14 +117,6 @@ struct RectSlider : View {
             sliderOffset = 16 + (robin.elapsedTime/robin.audioLength) * 467
         }
     }
-    
-    func formatSecondsToMinutesAndSeconds(seconds: Double) -> String {
-        let totalSeconds = Int(seconds)
-        let minutes = totalSeconds / 60
-        let remainingSeconds = totalSeconds % 60
-        
-        return String(format: "%02d:%02d", minutes, remainingSeconds)
-    }
 }
 
 #Preview {

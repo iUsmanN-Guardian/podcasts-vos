@@ -28,7 +28,7 @@ struct TileView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHGrid(rows: gridLayout, spacing: 40, content: {
+            HStack(spacing: 40, content: {
                 ForEach(0..<data.count, id: \.self) { i in
                     Card(data: data[i])
                         .onTapGesture { _ in
@@ -52,9 +52,10 @@ struct TileView: View {
                 }
             })
             .id(data)
+//            .padding(.top, 10)
         }
         .id(data)
-        .padding(.top, -25)
+        .padding(.top, -5)
         .contentMargins(50, for: .scrollContent)
         .scrollIndicators(.hidden)
     }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9736439C2B3F058D00AFA287 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736439B2B3F058D00AFA287 /* TileView.swift */; };
 		9736439E2B3F07FC00AFA287 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736439D2B3F07FC00AFA287 /* ListView.swift */; };
+		973643A12B3F47B000AFA287 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973643A02B3F47B000AFA287 /* Misc.swift */; };
+		973643A32B3F47C700AFA287 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973643A22B3F47C700AFA287 /* Cell.swift */; };
 		973A43302B3E1DFE00CCA7AB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 973A432F2B3E1DFE00CCA7AB /* RealityKitContent */; };
 		973A43322B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */; };
 		973A43342B3E1DFE00CCA7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43332B3E1DFE00CCA7AB /* ContentView.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		9736439B2B3F058D00AFA287 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		9736439D2B3F07FC00AFA287 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		973643A02B3F47B000AFA287 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		973643A22B3F47C700AFA287 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		973A432A2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guardian-podcasts-vision-os.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		973A432E2B3E1DFE00CCA7AB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guardian_podcasts_vision_osApp.swift; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9736439F2B3F47A900AFA287 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				973643A02B3F47B000AFA287 /* Misc.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		973A43212B3E1DFD00CCA7AB = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		973A432C2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os */ = {
 			isa = PBXGroup;
 			children = (
+				9736439F2B3F47A900AFA287 /* Misc */,
 				9790EF232B3E4DF5003CC3F4 /* View Models */,
 				9790EF1E2B3E47ED003CC3F4 /* Fonts */,
 				9790EF0E2B3E35E0003CC3F4 /* Network */,
@@ -127,6 +140,7 @@
 				9790EEFD2B3E1F5B003CC3F4 /* Masthead.swift */,
 				9790EEFF2B3E2075003CC3F4 /* SeriesPicker.swift */,
 				9790EF042B3E2423003CC3F4 /* Card.swift */,
+				973643A22B3F47C700AFA287 /* Cell.swift */,
 				9790EF192B3E437F003CC3F4 /* Player.swift */,
 				9736439B2B3F058D00AFA287 /* TileView.swift */,
 				9736439D2B3F07FC00AFA287 /* ListView.swift */,
@@ -259,9 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9736439E2B3F07FC00AFA287 /* ListView.swift in Sources */,
+				973643A12B3F47B000AFA287 /* Misc.swift in Sources */,
 				9790EF162B3E3630003CC3F4 /* NetworkEngine.swift in Sources */,
 				9790EEFE2B3E1F5B003CC3F4 /* Masthead.swift in Sources */,
 				9790EF122B3E3604003CC3F4 /* Endpoint.swift in Sources */,
+				973643A32B3F47C700AFA287 /* Cell.swift in Sources */,
 				9790EF082B3E2E0C003CC3F4 /* Podcast.swift in Sources */,
 				9790EF102B3E35FD003CC3F4 /* Network.swift in Sources */,
 				9790EF1A2B3E437F003CC3F4 /* Player.swift in Sources */,

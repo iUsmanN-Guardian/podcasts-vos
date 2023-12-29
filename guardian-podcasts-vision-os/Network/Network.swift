@@ -40,8 +40,6 @@ enum Networking {
                 return "/lists/tag/news/series/the-audio-long-read"
             case .politicsWeeklyAmerica:
                 return "/lists/tag/politics/series/politics-weekly-america"
-            default:
-                return "/lists/tag/football/series/footballweekly"
             }
         }
     }

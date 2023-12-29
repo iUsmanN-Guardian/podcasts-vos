@@ -59,7 +59,7 @@ struct ContentView: View, PodcastService {
         switch await fetchPodcastData(podcast: series) {
         case .success(let list):
             let series = list.title
-            let result = list.cards.map({PodcastModel(series: series, title: $0.item.title, url: URL(string: $0.item.audio.adFreeUri))})
+            let result = list.cards.map({PodcastModel(series: $0.item.metadata.series.title, title: $0.item.title, url: URL(string: $0.item.audio.adFreeUri), duration: Double($0.item.audio.durationInSeconds))})
             withAnimation(.spring()) {
                 data = result
             }
