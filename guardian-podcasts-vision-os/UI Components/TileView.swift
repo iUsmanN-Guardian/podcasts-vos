@@ -52,7 +52,6 @@ struct TileView: View {
                 }
             })
             .id(data)
-//            .padding(.top, 10)
         }
         .id(data)
         .padding(.top, -5)

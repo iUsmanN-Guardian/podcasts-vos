@@ -15,26 +15,24 @@ struct ListView: View {
     @EnvironmentObject var navVM: NavigationViewModel
     
     @Binding private var data: [PodcastModel]
+    @Binding private var series: PodcastSeries
     
     @ObservedObject var robin: Robin = .shared
     
-    let gridLayout = [
-        GridItem(.fixed(450))
-    ]
-    
-    init(data: Binding<[PodcastModel]>) {
+    init(data: Binding<[PodcastModel]>, series: Binding<PodcastSeries>) {
         self._data = data
+        self._series = series
     }
     
     var body: some View {
         HStack(spacing: 20) {
             VStack(alignment: .leading) {
-                Image(data.first?.series ?? "Podcasts")
+                Image(series == .allPodcasts ? "Podcasts" : data.first?.series ?? "Podcasts")
                     .resizable()
                     .frame(width: 250, height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 9))
                 HStack {
-                    Text(data.first?.series ?? "Podcasts")
+                    Text(series == .allPodcasts ? "Podcasts" : data.first?.series ?? "Podcasts")
                         .font(.custom("GuardianTextEgyptian-Bold", size: 42))
                         .multilineTextAlignment(.leading)
                         .contentTransition(.numericText())
@@ -81,5 +79,5 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView(data: .constant([.sample]))
+    ListView(data: .constant([.sample]), series: .constant(.allPodcasts))
 }

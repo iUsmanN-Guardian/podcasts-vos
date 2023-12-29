@@ -101,8 +101,6 @@ struct RectSlider : View {
                             sliderOffset = newValue
                         })
                         .onEnded({ value in
-                            
-                            print(sliderOffset)
                             Task {
                                 await robin.seek(to:((sliderOffset-16)/467.0)*robin.audioLength)
                                 isEditing = false

@@ -38,7 +38,7 @@ struct ContentView: View, PodcastService {
                 TileView(data: $data)
                     .environmentObject(navVM)
             } else {
-                ListView(data: $data)
+                ListView(data: $data, series: $series)
                     .environmentObject(navVM)
             }
             Spacer()
