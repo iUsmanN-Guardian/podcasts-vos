@@ -18,48 +18,31 @@ struct ContentView: View, PodcastService {
     @EnvironmentObject var navVM: NavigationViewModel
     
     @State private var series: PodcastSeries = .allPodcasts
+    @State private var layout: PodcastLayout = .list
+    
     @State private var data: [PodcastModel] = []
     
     @ObservedObject var robin: Robin = .shared
     
-    let layout = [
-//        GridItem(.fixed(400), spacing: -20),
-        GridItem(.fixed(450))
-    ]
-    
     var body: some View {
         VStack {
             VStack {
-                Masthead(series: $series)
-                Divider()
+                Masthead(series: $series, layout: $layout)
+                    .frame(height: 150)
             }
-            .padding([.top])
+            .padding(.top, 20)
             .padding(.horizontal, 50)
-
-            ScrollView(.horizontal) {
-                LazyHGrid(rows: layout, spacing: 40, content: {
-                    ForEach(0..<data.count, id: \.self) { i in
-                        Card(data: data[i])
-                            .onTapGesture { _ in
-                                if navVM.activePodcast == nil {
-                                    openWindow(id: "Player")
-                                }
-                                navVM.activePodcast = data[i]
-                                robin.loadSingle(source: .init(url: data[i].url!,
-                                                               metadata: RobinAudioMetadata(title: data[i].title,
-                                                                                            artist: data[i].series)))
-                            }
-                    }
-                })
-                .id(data)
+            Divider()
+            
+            if layout == .tiles {
+                TileView(data: $data)
+                    .environmentObject(navVM)
+            } else {
+                ListView(data: $data)
+                    .environmentObject(navVM)
             }
-            .id(data)
-            .padding(.top, -25)
-            .contentMargins(50, for: .scrollContent)
-            .scrollIndicators(.hidden)
+            Spacer()
         }
-//        .padding()
-//        .padding(.horizontal, 30)
         .task {
             //load initial data
             await refreshData()

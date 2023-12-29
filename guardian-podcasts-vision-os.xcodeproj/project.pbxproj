@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9736439C2B3F058D00AFA287 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736439B2B3F058D00AFA287 /* TileView.swift */; };
+		9736439E2B3F07FC00AFA287 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736439D2B3F07FC00AFA287 /* ListView.swift */; };
 		973A43302B3E1DFE00CCA7AB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 973A432F2B3E1DFE00CCA7AB /* RealityKitContent */; };
 		973A43322B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */; };
 		973A43342B3E1DFE00CCA7AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A43332B3E1DFE00CCA7AB /* ContentView.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9736439B2B3F058D00AFA287 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		9736439D2B3F07FC00AFA287 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		973A432A2B3E1DFD00CCA7AB /* guardian-podcasts-vision-os.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guardian-podcasts-vision-os.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		973A432E2B3E1DFE00CCA7AB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		973A43312B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guardian_podcasts_vision_osApp.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				9790EEFF2B3E2075003CC3F4 /* SeriesPicker.swift */,
 				9790EF042B3E2423003CC3F4 /* Card.swift */,
 				9790EF192B3E437F003CC3F4 /* Player.swift */,
+				9736439B2B3F058D00AFA287 /* TileView.swift */,
+				9736439D2B3F07FC00AFA287 /* ListView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9736439E2B3F07FC00AFA287 /* ListView.swift in Sources */,
 				9790EF162B3E3630003CC3F4 /* NetworkEngine.swift in Sources */,
 				9790EEFE2B3E1F5B003CC3F4 /* Masthead.swift in Sources */,
 				9790EF122B3E3604003CC3F4 /* Endpoint.swift in Sources */,
@@ -265,6 +272,7 @@
 				9790EF252B3E4E03003CC3F4 /* NavigationViewModel.swift in Sources */,
 				9790EF142B3E3610003CC3F4 /* Service.swift in Sources */,
 				973A43322B3E1DFE00CCA7AB /* guardian_podcasts_vision_osApp.swift in Sources */,
+				9736439C2B3F058D00AFA287 /* TileView.swift in Sources */,
 				9790EF032B3E2193003CC3F4 /* PodcastSeries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

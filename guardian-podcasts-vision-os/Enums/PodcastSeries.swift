@@ -21,3 +21,8 @@ enum PodcastSeries: String, Hashable {
     case australianPolitics
     case scienceWeekly
 }
+
+enum PodcastLayout: String, Hashable {
+    case list
+    case tiles
+}

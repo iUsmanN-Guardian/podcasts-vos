@@ -11,6 +11,7 @@ import Robin
 struct Masthead: View {
     
     @Binding var series: PodcastSeries
+    @Binding var layout: PodcastLayout
     
     var body: some View {
         HStack {
@@ -18,14 +19,22 @@ struct Masthead: View {
                 .resizable()
                 .frame(width: 270, height: 90)
             Spacer()
-            SeriesPicker(series: $series)
+            VStack(spacing: 20) {
+                Picker("Layout", selection: $layout) {
+                    Image(systemName: "list.bullet").tag(PodcastLayout.list)
+                    Image(systemName: "square.grid.3x2.fill").tag(PodcastLayout.tiles)
+                }
+                .pickerStyle(.segmented)
+                .frame(width: 165)
+                SeriesPicker(series: $series)
+            }
         }
         .padding(.vertical, 30)
-        .padding(.top, 30)
+        .padding(.top, 20)
     }
 }
 
 #Preview {
-    Masthead(series: .constant(.allPodcasts))
+    Masthead(series: .constant(.allPodcasts), layout: .constant(.tiles))
         .border(.white)
 }
