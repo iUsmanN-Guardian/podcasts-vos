@@ -38,8 +38,12 @@ struct Player: View {
                             robin.play()
                         }
                     }, label: {
-                        Image(systemName: robin.currentState == .playing ? "pause.fill" : "play.fill")
-                            .font(.extraLargeTitle)
+                        if robin.currentState != .playing && robin.currentState != .paused {
+                            ProgressView()
+                        } else {
+                            Image(systemName: robin.currentState == .playing ? "pause.fill" : "play.fill")
+                                .font(.system(size: 70))
+                        }
                     })
                     .buttonStyle(.plain)
                     .frame(width: 130)
@@ -72,7 +76,10 @@ struct RectSlider : View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
-                .frame(width: 550, height: 10)
+                .frame(width: 550, height: 7)
+                .foregroundStyle(.white.opacity(0.6))
+            RoundedRectangle(cornerRadius: 5)
+                .frame(width: 550, height: 7)
                 .foregroundStyle(.white.opacity(0.6))
             HStack {
                 ZStack {
@@ -80,6 +87,8 @@ struct RectSlider : View {
                         .frame(width: 100, height: 35)
                     Text("\(formatSecondsToMinutesAndSeconds(seconds: isEditing ? ((sliderOffset-16)/467.0)*robin.audioLength : robin.elapsedTime))")
                         .foregroundStyle(.black)
+                        .font(.system(size: 25))
+                        .bold()
                 }
                 .offset(x: sliderOffset)
                 .gesture(
@@ -92,18 +101,16 @@ struct RectSlider : View {
                             sliderOffset = newValue
                         })
                         .onEnded({ value in
-                            isEditing = false
+                            
                             print(sliderOffset)
                             Task {
                                 await robin.seek(to:((sliderOffset-16)/467.0)*robin.audioLength)
+                                isEditing = false
                             }
                         })
                 )
                 Spacer()
             }
-        }
-        .onAppear {
-            robin.changePlaybackRate(rate: 5.0)
         }
         .onChange(of: robin.elapsedTime) { oldValue, newValue in
             guard !isEditing else { return }

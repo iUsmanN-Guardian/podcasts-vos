@@ -19,7 +19,7 @@ struct Masthead: View {
                 .resizable()
                 .frame(width: 270, height: 90)
             Spacer()
-            VStack(spacing: 20) {
+            VStack(alignment: .trailing, spacing: 20) {
                 Picker("Layout", selection: $layout) {
                     Image(systemName: "list.bullet").tag(PodcastLayout.list)
                     Image(systemName: "square.grid.3x2.fill").tag(PodcastLayout.tiles)
