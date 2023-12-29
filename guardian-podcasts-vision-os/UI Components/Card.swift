@@ -15,16 +15,16 @@ struct Card: View {
         VStack(alignment: .leading) {
             Image(data.series)
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 220, height: 220)
                 .clipShape(RoundedRectangle(cornerRadius: 9))
             Text(data.series)
                 .font(.custom("GuardianTextEgyptian-Bold", size: 23))
             Text(data.title)
                 .font(.custom("GuardianTextEgyptian-Med", size: 25))
                 .truncationMode(.tail)
-                .lineLimit(3, reservesSpace: true)
+                .lineLimit(5, reservesSpace: true)
         }
-        .frame(width: 200)
+        .frame(width: 220)
     }
 }
 

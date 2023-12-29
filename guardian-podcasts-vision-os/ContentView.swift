@@ -23,14 +23,19 @@ struct ContentView: View, PodcastService {
     @ObservedObject var robin: Robin = .shared
     
     let layout = [
-        GridItem(.fixed(400), spacing: -20),
-        GridItem(.fixed(400))
+//        GridItem(.fixed(400), spacing: -20),
+        GridItem(.fixed(450))
     ]
     
     var body: some View {
         VStack {
-            Masthead()
-            SeriesPicker(series: $series)
+            VStack {
+                Masthead(series: $series)
+                Divider()
+            }
+            .padding([.top])
+            .padding(.horizontal, 50)
+
             ScrollView(.horizontal) {
                 LazyHGrid(rows: layout, spacing: 40, content: {
                     ForEach(0..<data.count, id: \.self) { i in
@@ -49,11 +54,12 @@ struct ContentView: View, PodcastService {
                 .id(data)
             }
             .id(data)
-            .padding(.vertical)
-            .padding(.top)
+            .padding(.top, -25)
+            .contentMargins(50, for: .scrollContent)
+            .scrollIndicators(.hidden)
         }
-        .padding()
-        .padding(.horizontal, 30)
+//        .padding()
+//        .padding(.horizontal, 30)
         .task {
             //load initial data
             await refreshData()

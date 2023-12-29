@@ -26,22 +26,24 @@ extension PodcastService {
             return .footballWeekly
         case .scienceWeekly:
             return .scienceWeekly
+        case .audioLongReads:
+            return .audioLongReads
+        case .politicsWeeklyAmerica:
+            return .politicsWeeklyAmerica
         default:
             return .allPodcasts
-//        case .audioLongReads:
-//            <#code#>
-//        case .politicsWeeklyUK:
-//            <#code#>
-//        case .politicsWeeklyAmerica:
-//            <#code#>
-//        case .popCulture:
-//            <#code#>
-//        case .weekend:
-//            <#code#>
-//        case .guardianBooks:
-//            <#code#>
-//        case .australianPolitics:
-//            <#code#>
+            
+            //        case .politicsWeeklyUK:
+            //            <#code#>
+            
+            //        case .popCulture:
+            //            <#code#>
+            //        case .weekend:
+            //            <#code#>
+            //        case .guardianBooks:
+            //            <#code#>
+            //        case .australianPolitics:
+            //            <#code#>
         }
     }
 }

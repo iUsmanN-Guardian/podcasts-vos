@@ -8,19 +8,24 @@
 import SwiftUI
 import Robin
 
-struct Masthead: View, PodcastService {
+struct Masthead: View {
+    
+    @Binding var series: PodcastSeries
+    
     var body: some View {
         HStack {
             Image("GuardianLogo")
                 .resizable()
-                .frame(width: 210, height: 70)
+                .frame(width: 270, height: 90)
             Spacer()
+            SeriesPicker(series: $series)
         }
         .padding(.vertical, 30)
+        .padding(.top, 30)
     }
 }
 
 #Preview {
-    Masthead()
+    Masthead(series: .constant(.allPodcasts))
         .border(.white)
 }

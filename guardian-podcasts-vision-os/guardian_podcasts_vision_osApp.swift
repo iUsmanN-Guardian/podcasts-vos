@@ -18,7 +18,7 @@ struct guardian_podcasts_vision_osApp: App {
                 .environmentObject(navVM)
                 .frame(
                     minWidth: 1100, maxWidth: 1100,
-                    minHeight: 1060, maxHeight: 1060)
+                    minHeight: 720, maxHeight: 720)
         }
         .windowResizability(.contentSize)
         

@@ -27,7 +27,7 @@ struct Player: View {
                             .font(.custom("GuardianTextEgyptian-Med", size: 32))
                         Spacer()
                     }
-                    .frame(height: 200)
+                    .frame(height: 180)
                     .padding(.leading, 5)
                     Spacer()
                     Button(action: {
@@ -46,10 +46,10 @@ struct Player: View {
                 }
                 .padding([.horizontal, .top])
                 RoundedRectangle(cornerRadius: 5)
-                    .frame(width: 520, height: 10)
+                    .frame(width: 530, height: 10)
                 Spacer()
             }
-            .frame(width: 600, height: 260)
+            .frame(width: 600, height: 240)
             .background(.regularMaterial)
         }
     }
