@@ -13,7 +13,7 @@ struct guardian_podcasts_vision_osApp: App {
     @StateObject var navVM = NavigationViewModel()
     
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "Main") {
             ContentView()
                 .environmentObject(navVM)
                 .frame(

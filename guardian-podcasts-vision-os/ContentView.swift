@@ -18,7 +18,7 @@ struct ContentView: View, PodcastService {
     @EnvironmentObject var navVM: NavigationViewModel
     
     @State private var series: PodcastSeries = .allPodcasts
-    @State private var layout: PodcastLayout = .list
+    @State private var layout: PodcastLayout = .tiles
     
     @State private var data: [PodcastModel] = []
     
@@ -60,7 +60,9 @@ struct ContentView: View, PodcastService {
         case .success(let list):
             let series = list.title
             let result = list.cards.map({PodcastModel(series: series, title: $0.item.title, url: URL(string: $0.item.audio.adFreeUri))})
-            data = result
+            withAnimation(.spring()) {
+                data = result
+            }
             print("$$ \(data)")
         case .failure(let error):
             print("failure")

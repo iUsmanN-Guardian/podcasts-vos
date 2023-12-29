@@ -24,6 +24,7 @@ struct Masthead: View {
                     Image(systemName: "list.bullet").tag(PodcastLayout.list)
                     Image(systemName: "square.grid.3x2.fill").tag(PodcastLayout.tiles)
                 }
+                .animation(.spring, value: layout)
                 .pickerStyle(.segmented)
                 .frame(width: 165)
                 SeriesPicker(series: $series)

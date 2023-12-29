@@ -44,7 +44,7 @@ struct TileView: View {
                             content
                                 .opacity(phase.isIdentity ? 1.0 : 0.75)
                                 .blur(radius: phase.isIdentity ? 0 : 10)
-                                .rotation3DEffect(.degrees(phase.isIdentity ? 0 : 10), axis: (1,0,0))
+                                .scaleEffect(phase.isIdentity ? CGSize(width: 1, height: 1) : CGSize(width: 0.95, height: 0.95))
                         }
                 }
             })
