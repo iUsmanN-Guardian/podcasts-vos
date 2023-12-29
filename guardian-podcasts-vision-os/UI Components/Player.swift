@@ -65,6 +65,10 @@ struct RectSlider : View {
     
     @State var sliderOffset: CGFloat = 16.1
     
+    @ObservedObject var robin: Robin = .shared
+    
+    @State var isEditing = false
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
@@ -74,27 +78,45 @@ struct RectSlider : View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: 100, height: 35)
-                    Text("\(sliderOffset/467)")
+                    Text("\(formatSecondsToMinutesAndSeconds(seconds: isEditing ? ((sliderOffset-16)/467.0)*robin.audioLength : robin.elapsedTime))")
                         .foregroundStyle(.black)
                 }
                 .offset(x: sliderOffset)
                 .gesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged({ value in
-                            
+                            if !isEditing { isEditing = true }
                             let newValue = sliderOffset + value.velocity.width*0.005
                             print(newValue)
                             guard newValue > 16 && newValue < 467 else { return }
                             sliderOffset = newValue
                         })
+                        .onEnded({ value in
+                            isEditing = false
+                            print(sliderOffset)
+                            Task {
+                                await robin.seek(to:((sliderOffset-16)/467.0)*robin.audioLength)
+                            }
+                        })
                 )
                 Spacer()
             }
         }
+        .onAppear {
+            robin.changePlaybackRate(rate: 5.0)
+        }
+        .onChange(of: robin.elapsedTime) { oldValue, newValue in
+            guard !isEditing else { return }
+            sliderOffset = 16 + (robin.elapsedTime/robin.audioLength) * 467
+        }
     }
     
-    func updateSlider(offset: CGFloat) {
-        sliderOffset = offset
+    func formatSecondsToMinutesAndSeconds(seconds: Double) -> String {
+        let totalSeconds = Int(seconds)
+        let minutes = totalSeconds / 60
+        let remainingSeconds = totalSeconds % 60
+        
+        return String(format: "%02d:%02d", minutes, remainingSeconds)
     }
 }
 
