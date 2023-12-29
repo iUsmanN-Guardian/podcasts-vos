@@ -35,7 +35,10 @@ struct TileView: View {
                             if navVM.activePodcast == nil {
                                 openWindow(id: "Player")
                             }
-                            navVM.activePodcast = data[i]
+                            withAnimation(.spring()) {
+                                navVM.activePodcast = data[i]
+                            }
+                            
                             robin.loadSingle(source: .init(url: data[i].url!,
                                                            metadata: RobinAudioMetadata(title: data[i].title,
                                                                                         artist: data[i].series)))

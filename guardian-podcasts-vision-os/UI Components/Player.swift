@@ -28,6 +28,7 @@ struct Player: View {
                         Spacer()
                     }
                     .frame(height: 180)
+                    .contentTransition(.numericText())
                     .padding(.leading, 5)
                     Spacer()
                     Button(action: {
@@ -45,13 +46,55 @@ struct Player: View {
                     .padding(.trailing, 10)
                 }
                 .padding([.horizontal, .top])
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: 530, height: 10)
+                HStack {
+                    Spacer()
+                    RectSlider()
+                    Spacer()
+                }
+                    .padding(.top, -12)
                 Spacer()
             }
-            .frame(width: 600, height: 240)
+            .frame(width: 600, height: 250)
             .background(.regularMaterial)
         }
+    }
+}
+
+
+struct RectSlider : View {
+    
+    @State var sliderOffset: CGFloat = 16.1
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .frame(width: 550, height: 10)
+                .foregroundStyle(.white.opacity(0.6))
+            HStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(width: 100, height: 35)
+                    Text("\(sliderOffset/467)")
+                        .foregroundStyle(.black)
+                }
+                .offset(x: sliderOffset)
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged({ value in
+                            
+                            let newValue = sliderOffset + value.velocity.width*0.005
+                            print(newValue)
+                            guard newValue > 16 && newValue < 467 else { return }
+                            sliderOffset = newValue
+                        })
+                )
+                Spacer()
+            }
+        }
+    }
+    
+    func updateSlider(offset: CGFloat) {
+        sliderOffset = offset
     }
 }
 
