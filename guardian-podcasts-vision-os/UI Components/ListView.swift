@@ -27,12 +27,12 @@ struct ListView: View {
     var body: some View {
         HStack(spacing: 20) {
             VStack(alignment: .leading) {
-                Image(series == .allPodcasts ? "Podcasts" : data.first?.series ?? "Podcasts")
+                Image(series == .allPodcasts ? "Featured" : data.first?.series ?? "Featured")
                     .resizable()
                     .frame(width: 250, height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 9))
                 HStack {
-                    Text(series == .allPodcasts ? "Podcasts" : data.first?.series ?? "Podcasts")
+                    Text(series == .allPodcasts ? "Featured" : data.first?.series ?? "Featured")
                         .font(.custom("GuardianTextEgyptian-Bold", size: 42))
                         .multilineTextAlignment(.leading)
                         .contentTransition(.numericText())
@@ -47,7 +47,7 @@ struct ListView: View {
                     ForEach(0..<data.count, id: \.self) { i in
                         Cell(data: data[i])
                             .onTapGesture { _ in
-                                if navVM.activePodcast == nil {
+                                if !navVM.isShowingMiniplayer {
                                     openWindow(id: "Player")
                                 }
                                 withAnimation(.spring()) {
@@ -63,6 +63,8 @@ struct ListView: View {
                                     .blur(radius: phase.isIdentity ? 0 : 10)
                                     .scaleEffect(phase.isIdentity ? CGSize(width: 1,height: 1) : CGSize(width: 0.95,height: 0.95))
                             }
+                            .contentShape(.hoverEffect, RoundedRectangle(cornerRadius: 8))
+                            .hoverEffect()
                         Divider()
                     }
                     Spacer()

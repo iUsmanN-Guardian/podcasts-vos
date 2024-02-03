@@ -30,6 +30,8 @@ extension PodcastService {
             return .audioLongReads
         case .politicsWeeklyAmerica:
             return .politicsWeeklyAmerica
+        case .weekend:
+            return .weekend
         default:
             return .allPodcasts
             
@@ -38,8 +40,8 @@ extension PodcastService {
             
             //        case .popCulture:
             //            <#code#>
-            //        case .weekend:
-            //            <#code#>
+//                    case .weekend:
+//                        <#code#>
             //        case .guardianBooks:
             //            <#code#>
             //        case .australianPolitics:

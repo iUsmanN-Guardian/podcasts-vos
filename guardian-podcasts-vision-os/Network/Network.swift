@@ -25,6 +25,7 @@ enum Networking {
         case scienceWeekly
         case audioLongReads
         case politicsWeeklyAmerica
+        case weekend
         
         var rawValue: String {
             switch self {
@@ -40,6 +41,8 @@ enum Networking {
                 return "/lists/tag/news/series/the-audio-long-read"
             case .politicsWeeklyAmerica:
                 return "/lists/tag/politics/series/politics-weekly-america"
+            case .weekend:
+                return "/lists/tag/lifeandstyle/series/weekend"
             }
         }
     }

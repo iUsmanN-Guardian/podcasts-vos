@@ -43,6 +43,9 @@ struct Player: View {
                         } else {
                             Image(systemName: robin.currentState == .playing ? "pause.fill" : "play.fill")
                                 .font(.system(size: 70))
+                                .padding(8)
+                                .contentShape(.hoverEffect, RoundedRectangle(cornerRadius: 10))
+                                .hoverEffect()
                         }
                     })
                     .buttonStyle(.plain)
@@ -61,6 +64,12 @@ struct Player: View {
             .frame(width: 600, height: 250)
             .background(.regularMaterial)
         }
+        .onDisappear {
+            navVM.isShowingMiniplayer = false
+        }
+        .onAppear {
+            navVM.isShowingMiniplayer = true
+        }
     }
 }
 
@@ -76,10 +85,7 @@ struct RectSlider : View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
-                .frame(width: 550, height: 7)
-                .foregroundStyle(.white.opacity(0.6))
-            RoundedRectangle(cornerRadius: 5)
-                .frame(width: 550, height: 7)
+                .frame(width: 550, height: 15)
                 .foregroundStyle(.white.opacity(0.6))
             HStack {
                 ZStack {

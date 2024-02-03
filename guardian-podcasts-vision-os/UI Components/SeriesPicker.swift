@@ -13,7 +13,8 @@ struct SeriesPicker: View {
     
     var body: some View {
         Picker("Series", selection: $series) {
-            Text("All Podcasts").tag(PodcastSeries.allPodcasts)
+            Text("Featured").tag(PodcastSeries.allPodcasts)
+            Text("Weekend").tag(PodcastSeries.weekend)
             Text("Today in Focus").tag(PodcastSeries.todayInFocus)
             Text("Football Weekly").tag(PodcastSeries.footballWeekly)
             Text("Science Weekly").tag(PodcastSeries.scienceWeekly)

@@ -28,11 +28,11 @@ struct TileView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 40, content: {
+            LazyHStack(spacing: 20, content: {
                 ForEach(0..<data.count, id: \.self) { i in
                     Card(data: data[i])
                         .onTapGesture { _ in
-                            if navVM.activePodcast == nil {
+                            if !navVM.isShowingMiniplayer {
                                 openWindow(id: "Player")
                             }
                             withAnimation(.spring()) {
@@ -49,6 +49,9 @@ struct TileView: View {
                                 .blur(radius: phase.isIdentity ? 0 : 10)
                                 .scaleEffect(phase.isIdentity ? CGSize(width: 1, height: 1) : CGSize(width: 0.95, height: 0.95))
                         }
+                        .padding(10)
+                        .contentShape(.hoverEffect, RoundedRectangle(cornerRadius: 12))
+                        .hoverEffect()
                 }
             })
             .id(data)
@@ -57,6 +60,7 @@ struct TileView: View {
         .padding(.top, -5)
         .contentMargins(50, for: .scrollContent)
         .scrollIndicators(.hidden)
+        
     }
 }
 

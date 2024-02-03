@@ -25,23 +25,28 @@ struct ContentView: View, PodcastService {
     @ObservedObject var robin: Robin = .shared
     
     var body: some View {
-        VStack {
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.clear, .clear,  series.tintColor]), startPoint: .top, endPoint: .bottom)
+                        .edgesIgnoringSafeArea(.all)
+                        .opacity(0.1)
             VStack {
-                Masthead(series: $series, layout: $layout)
-                    .frame(height: 150)
+                VStack {
+                    Masthead(series: $series, layout: $layout)
+                        .frame(height: 150)
+                }
+                .padding(.top, 20)
+                .padding(.horizontal, 50)
+                Divider()
+                
+                if layout == .tiles {
+                    TileView(data: $data)
+                        .environmentObject(navVM)
+                } else {
+                    ListView(data: $data, series: $series)
+                        .environmentObject(navVM)
+                }
+                Spacer()
             }
-            .padding(.top, 20)
-            .padding(.horizontal, 50)
-            Divider()
-            
-            if layout == .tiles {
-                TileView(data: $data)
-                    .environmentObject(navVM)
-            } else {
-                ListView(data: $data, series: $series)
-                    .environmentObject(navVM)
-            }
-            Spacer()
         }
         .task {
             //load initial data
@@ -51,6 +56,10 @@ struct ContentView: View, PodcastService {
             // reload data
             Task {
                 await refreshData()
+            }
+            
+            withAnimation {
+                layout = series == .allPodcasts ? .tiles : .list
             }
         }
     }
@@ -75,6 +84,8 @@ struct ContentView: View, PodcastService {
     @StateObject var navVM = NavigationViewModel()
     
     return ContentView()
-        .frame(height: 500)
         .environmentObject(navVM)
+        .frame(
+            minWidth: 1120, maxWidth: 1120,
+            minHeight: 720, maxHeight: 720)
 }
