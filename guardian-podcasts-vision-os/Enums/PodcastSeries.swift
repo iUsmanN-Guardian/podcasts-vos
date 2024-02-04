@@ -42,6 +42,35 @@ enum PodcastSeries: String, Hashable {
             return .clear
         }
     }
+    
+    var imageName: String {
+        switch self {
+        case .allPodcasts:
+            return ""
+        case .todayInFocus:
+            return "Today in Focus"
+        case .footballWeekly:
+            return "Football Weekly"
+        case .comfortEating:
+            return "Comfort Eating"
+        case .audioLongReads:
+            return "The Audio Long Read"
+        case .politicsWeeklyUK:
+            return "Politics Weekly UK"
+        case .politicsWeeklyAmerica:
+            return "Politics Weekly America"
+        case .popCulture:
+            return ""
+        case .weekend:
+            return "Weekend"
+        case .guardianBooks:
+            return ""
+        case .australianPolitics:
+            return ""
+        case .scienceWeekly:
+            return "Science Weekly"
+        }
+    }
 }
 
 enum PodcastLayout: String, Hashable {

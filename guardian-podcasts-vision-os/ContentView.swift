@@ -26,9 +26,19 @@ struct ContentView: View, PodcastService {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.clear, .clear,  series.tintColor]), startPoint: .top, endPoint: .bottom)
-                        .edgesIgnoringSafeArea(.all)
-                        .opacity(0.1)
+            Image(series.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 1120, height: 720)
+                .blur(radius: 80)
+                .opacity(0.1)
+                .mask {
+                    LinearGradient(colors: [.clear, .white.opacity(0.5), .white], startPoint: .top, endPoint: .center)
+                }
+            
+//            LinearGradient(gradient: Gradient(colors: [.clear, .clear,  series.tintColor]), startPoint: .top, endPoint: .bottom)
+//                        .edgesIgnoringSafeArea(.all)
+//                        .opacity(0.1)
             VStack {
                 VStack {
                     Masthead(series: $series, layout: $layout)
@@ -62,6 +72,9 @@ struct ContentView: View, PodcastService {
                 layout = series == .allPodcasts ? .tiles : .list
             }
         }
+        .onDisappear(perform: {
+            navVM.isShowingMainWindow = false
+        })
     }
     
     func refreshData() async {

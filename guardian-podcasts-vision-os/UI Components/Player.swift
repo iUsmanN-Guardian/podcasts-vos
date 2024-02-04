@@ -10,60 +10,74 @@ import Robin
 
 struct Player: View {
     
+    @Environment(\.openWindow) private var openWindow
+    
     @EnvironmentObject var navVM: NavigationViewModel
     
     @ObservedObject var robin: Robin = .shared
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Image(navVM.activePodcast?.series ?? "")
-                .resizable()
-            VStack {
-                HStack {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(navVM.activePodcast?.series ?? "")
-                            .font(.custom("GuardianTextEgyptian-Bold", size: 32))
-                        Text(navVM.activePodcast?.title ?? "")
-                            .font(.custom("GuardianTextEgyptian-Med", size: 32))
+        GeometryReader{ geometry in
+            ZStack(alignment: .bottom) {
+                Image(navVM.activePodcast?.series ?? "")
+                    .resizable()
+                    .blur(radius: heightToBlur(input: geometry.size.height)*20)
+                VStack {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(navVM.activePodcast?.series ?? "")
+                                .font(.custom("GuardianTextEgyptian-Bold", size: 32))
+                            Text(navVM.activePodcast?.title ?? "")
+                                .font(.custom("GuardianTextEgyptian-Med", size: 32))
+                            Spacer()
+                        }
+                        .frame(height: 180)
+                        .contentTransition(.numericText())
+                        .padding(.leading, 5)
+                        Spacer()
+                        Button(action: {
+                            if robin.currentState == .playing {
+                                robin.pause()
+                            } else {
+                                robin.play()
+                            }
+                        }, label: {
+                            if robin.currentState != .playing && robin.currentState != .paused {
+                                ProgressView()
+                            } else {
+                                Image(systemName: robin.currentState == .playing ? "pause.fill" : "play.fill")
+                                    .font(.system(size: 70))
+                                    .padding(8)
+                                    .contentShape(.hoverEffect, RoundedRectangle(cornerRadius: 10))
+                                    .hoverEffect()
+                            }
+                        })
+                        .buttonStyle(.plain)
+                        .frame(width: 130)
+                        .padding(.trailing, 10)
+                    }
+                    .padding([.horizontal, .top])
+                    HStack {
+                        Spacer()
+                        RectSlider()
                         Spacer()
                     }
-                    .frame(height: 180)
-                    .contentTransition(.numericText())
-                    .padding(.leading, 5)
-                    Spacer()
-                    Button(action: {
-                        if robin.currentState == .playing {
-                            robin.pause()
-                        } else {
-                            robin.play()
-                        }
-                    }, label: {
-                        if robin.currentState != .playing && robin.currentState != .paused {
-                            ProgressView()
-                        } else {
-                            Image(systemName: robin.currentState == .playing ? "pause.fill" : "play.fill")
-                                .font(.system(size: 70))
-                                .padding(8)
-                                .contentShape(.hoverEffect, RoundedRectangle(cornerRadius: 10))
-                                .hoverEffect()
-                        }
-                    })
-                    .buttonStyle(.plain)
-                    .frame(width: 130)
-                    .padding(.trailing, 10)
-                }
-                .padding([.horizontal, .top])
-                HStack {
-                    Spacer()
-                    RectSlider()
-                    Spacer()
-                }
                     .padding(.top, -12)
-                Spacer()
+                    Spacer()
+                }
+                .frame(width: 600, height: 250)
+                .background(.regularMaterial)
             }
-            .frame(width: 600, height: 250)
-            .background(.regularMaterial)
         }
+        .ornament(visibility: navVM.isShowingMainWindow ? .hidden : .visible, attachmentAnchor: .scene(.topTrailing), contentAlignment: .bottom, ornament: {
+            Button(action: {
+                navVM.isShowingMainWindow = true
+                openWindow(id: "Main")
+            }, label: {
+                Image(systemName: "arrow.up.right.bottomleft.rectangle.fill")
+                    .hoverEffect()
+            })
+        })
         .onDisappear {
             navVM.isShowingMiniplayer = false
         }

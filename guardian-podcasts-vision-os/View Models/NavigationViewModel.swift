@@ -20,4 +20,6 @@ class NavigationViewModel: ObservableObject {
             }
         }
     }
+    
+    var isShowingMainWindow: Bool = true
 }
