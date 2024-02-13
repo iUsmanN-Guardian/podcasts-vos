@@ -17,7 +17,7 @@ struct Masthead: View {
         HStack {
             Image("GuardianLogo")
                 .resizable()
-                .frame(width: 270, height: 90)
+                .frame(width: 340, height: 90)
             Spacer()
             VStack(alignment: .trailing, spacing: 20) {
                 Picker("Layout", selection: $layout) {
