@@ -41,7 +41,7 @@ struct TileView: View {
                             
                             robin.loadSingle(source: .init(url: data[i].url!,
                                                            metadata: RobinAudioMetadata(title: data[i].title,
-                                                                                        artist: data[i].series)))
+                                                                                        artist: data[i].series)), presentation: .fullWindow)
                         }
                         .scrollTransition { content, phase in
                             content
