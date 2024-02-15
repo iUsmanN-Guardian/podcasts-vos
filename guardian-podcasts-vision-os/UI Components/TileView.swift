@@ -33,7 +33,7 @@ struct TileView: View {
                     Card(data: data[i])
                         .onTapGesture { _ in
                             if !navVM.isShowingMiniplayer {
-                                openWindow(id: "Player")
+//                                openWindow(id: "Player")
                             }
                             withAnimation(.spring()) {
                                 navVM.activePodcast = data[i]

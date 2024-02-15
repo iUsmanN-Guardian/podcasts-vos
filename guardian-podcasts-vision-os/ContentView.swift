@@ -75,6 +75,10 @@ struct ContentView: View, PodcastService {
         .onDisappear(perform: {
             navVM.isShowingMainWindow = false
         })
+        .ornament(visibility: navVM.isShowingMiniplayer ? .visible : .hidden, attachmentAnchor: .scene(.bottom)) {
+            Player()
+                .frame(minWidth: 600, minHeight: 150)
+        }
     }
     
     func refreshData() async {
